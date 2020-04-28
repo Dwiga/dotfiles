@@ -1,3 +1,4 @@
+# $ ln -s ~/local/.vimrc.local ~/.vimrc
 # === EDITOR ===
 Pry.editor = 'vim'
 
