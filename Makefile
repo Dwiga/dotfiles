@@ -48,3 +48,16 @@ nvm-install:
 	@nvm install 12
 	@nvm use 12
 	@nvm install 12.18.3
+
+git-aliases:
+	@git config --global alias.co checkout
+	@git config --global alias.r rebase
+	@git config --global alias.cm commit
+	@git config --global alias.a add
+	@git config --global alias.d diff
+	@git config --global alias.b branch
+	@git config --global alias.s status
+	@git config --global alias.i init
+	@git config --global alias.c clone
+	@git config --global alias.p push
+	@git config --global alias.st stash
