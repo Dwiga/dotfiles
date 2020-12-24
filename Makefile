@@ -32,6 +32,9 @@ tmux-install:
 ag-install:
 	@sudo apt install ag-silversearcher
 
+yarn-install:
+	@npm install -g yarn
+
 python-dependency-install:
 	@sudo apt-get install -y build-essential zlib1g-dev libbz2-dev bzip2 openssl libssl-dev
 
