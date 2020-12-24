@@ -1,4 +1,5 @@
 # if-shell "[ -f ~/local/.tmux.conf.local ]" 'source ~/local/.tmux.conf.local'
+# ln -s local/.tmux.conf.local .tmux.conf
 
 set-option -g default-shell /bin/zsh
 
