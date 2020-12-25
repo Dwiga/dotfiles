@@ -64,3 +64,4 @@ git-aliases:
 	@git config --global alias.c clone
 	@git config --global alias.p push
 	@git config --global alias.st stash
+	@git config --global core.editor "vim"
