@@ -65,3 +65,14 @@ git-aliases:
 	@git config --global alias.p push
 	@git config --global alias.st stash
 	@git config --global core.editor "vim"
+
+ssh-gitlab:
+	@cd ~
+	@mkdir -p .ssh
+	@cd .ssh
+	@echo Enter file in which to save the key diisi dengan 'gitlab'
+	@echo password dikosongi
+	@cd ~/.ssh && ssh-keygen -t ed25519 -C "gitlab"
+	@sudo apt install xclip
+	@cd ~/.ssh && ls
+	@cd ~/.ssh && cat gitlab.pub
