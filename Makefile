@@ -1,3 +1,6 @@
+ASDF_HOME = $HOME/.asdf/asdf.sh
+
+
 conf-zsh:
 	@echo ==============zsh installing==========
 	@sudo apt install zsh
@@ -8,13 +11,11 @@ conf-zsh:
 conf-asdf:
 	@echo ==============asdf installing==========
 	@git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.0
-	@echo ". $HOME/.asdf/asdf.sh" >> ~/.zshrc
+	@echo ". $(ASDF_HOME)" >> ~/.zshrc
 
 conf-nvm:
 	@sudo apt install wget
 	@wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-	@echo 'export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}"  ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"' >> ~/.zshrc
-	@echo '[ -s "$NVM_DIR/nvm.sh"  ] && \. "$NVM_DIR/nvm.sh" # This loads nvm' >> ~/.zshrc
 
 git-install:
 	@echo ==============git installing==========
@@ -30,13 +31,13 @@ tmux-install:
 	@sudo apt install tmux
 
 ag-install:
-	@sudo apt install ag-silversearcher
+	@sudo apt install silversearcher-ag
 
 yarn-install:
 	@npm install -g yarn
 
 python-dependency-install:
-	@sudo apt-get install -y build-essential zlib1g-dev libbz2-dev bzip2 openssl libssl-dev
+	@sudo apt-get install -y build-essential zlib1g-dev libbz2-dev bzip2 openssl libssl-dev libffi-dev
 
 asdf-python:
 	@asdf plugin add python
@@ -76,3 +77,9 @@ ssh-gitlab:
 	@sudo apt install xclip
 	@cd ~/.ssh && ls
 	@cd ~/.ssh && cat gitlab.pub
+
+vundle-setup:
+	@git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+activate-elementary-wifi:
+	@nmcli radio wifi on
