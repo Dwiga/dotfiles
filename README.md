@@ -9,3 +9,7 @@ for example:
 so .vimrc is a symbolyc link for local/.vimrc.local
 
 https://www.hostinger.co.id/tutorial/symbolic-link-linux/
+
+Use `stew`
+install brew
+and then `brew install stew`

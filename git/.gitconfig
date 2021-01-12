@@ -1,0 +1,18 @@
+[alias]
+	co = checkout
+	r = rebase
+	cm = commit
+	a = add
+	d = diff
+	b = branch
+	s = status
+	i = init
+	c = clone
+	p = push
+	st = stash
+  up = !f() { git remote update $1 -p; git merge --ff-only @{u} $2;  }; f
+[core]
+	editor = vim
+[user]
+	email = dwi@5000minds.com
+	name = Dwi Ahmad
