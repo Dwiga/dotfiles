@@ -39,6 +39,10 @@ yarn-install:
 python-dependency-install:
 	@sudo apt-get install -y build-essential zlib1g-dev libbz2-dev bzip2 openssl libssl-dev libffi-dev
 
+
+php-dependency-install:
+	@sudo apt install -y libzip-dev libreadline-dev libpq-dev libonig-dev oniguruma libgd-dev libgd-gd2-perl libcurl4-openssl-dev libxml2-dev libxml2 gawk re2c
+
 asdf-python:
 	@asdf plugin add python
 	@asdf install python latest

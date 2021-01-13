@@ -10,7 +10,7 @@
 	c = clone
 	p = push
 	st = stash
-  up = !f() { git remote update $1 -p; git merge --ff-only @{u} $2;  }; f
+  up = "!f() { git remote update $1 -p; git merge --ff-only @{u} $2;  }; f" 
 [core]
 	editor = vim
 [user]
