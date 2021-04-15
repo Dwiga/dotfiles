@@ -87,3 +87,9 @@ vundle-setup:
 
 activate-elementary-wifi:
 	@nmcli radio wifi on
+
+install-stow:
+	@sudo apt install stow
+
+install-antigen:
+	@curl -L git.io/antigen > antigen.zsh
